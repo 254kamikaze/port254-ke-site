@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>port254 - OT Cybersecurity Advisory | Kenya</title>
+    <meta name="description" content="OT cybersecurity advisory for Kenya's critical information infrastructure operators. IEC 62443 assessments, CII Regulations compliance, incident response planning, and CISO advisory.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://port254.co.ke/">
+    <meta property="og:title" content="port254 - OT Cybersecurity Advisory | Kenya">
+    <meta property="og:description" content="Kenya's CII Regulations are in force. IEC 62443-anchored advisory for energy, water, transport, and financial infrastructure operators.">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .hero {
+            text-align: center;
+            padding: 6rem 2rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            color: #4B8BF5;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: #d1d5db;
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+        }
+
+        .hero-tagline {
+            font-size: 1rem;
+            color: #6b7280;
+            margin-bottom: 2.5rem;
+            letter-spacing: 0.04em;
+            line-height: 1.6;
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            color: #9ca3af;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: rgba(96, 165, 250, 0.1);
+            border: 2px solid #4B8BF5;
+            border-radius: 0.5rem;
+            color: #4B8BF5;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .cta-button:hover {
+            background: rgba(96, 165, 250, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .cta-button.secondary {
+            border-color: #2a2a2a;
+            color: #d1d5db;
+        }
+
+        .cta-button.secondary:hover {
+            border-color: #4B8BF5;
+            color: #4B8BF5;
+        }
+
+        .compliance-alert {
+            max-width: 900px;
+            margin: 0 auto 2rem;
+            background: rgba(251, 146, 60, 0.06);
+            border: 1px solid rgba(251, 146, 60, 0.2);
+            border-radius: 0.5rem;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .compliance-alert-dot {
+            width: 8px;
+            height: 8px;
+            background: #f97316;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 0.35rem;
+        }
+
+        .compliance-alert p {
+            color: #d1d5db;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .compliance-alert p strong {
+            color: #fb923c;
+        }
+
+        .stat-strip {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border-top: 1px solid #2a2a2a;
+            border-bottom: 1px solid #2a2a2a;
+            margin: 3rem 0 0;
+        }
+
+        .stat-strip-item {
+            padding: 1.5rem;
+            text-align: center;
+            border-right: 1px solid #2a2a2a;
+        }
+
+        .stat-strip-item:last-child {
+            border-right: none;
+        }
+
+        .stat-strip-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #4B8BF5;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-strip-label {
+            font-size: 0.75rem;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .features-section {
+            max-width: 1280px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: rgba(59, 130, 246, 0.05);
+            border: 1px solid #2a2a2a;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: #4B8BF5;
+            transform: translateY(-4px);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(96, 165, 250, 0.15);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: #4B8BF5;
+        }
+
+        .feature-title {
+            font-size: 1.125rem;
+            color: #e5e7eb;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .feature-reg {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #4B8BF5;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-description {
+            color: #9ca3af;
+            line-height: 1.65;
+            font-size: 0.9rem;
+        }
+
+        .feature-link {
+            color: #4B8BF5;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1.25rem;
+            font-size: 0.875rem;
+        }
+
+        .feature-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.5rem; }
+            .hero-subtitle { font-size: 1.25rem; }
+            .features-grid { grid-template-columns: 1fr; }
+            .stat-strip { grid-template-columns: repeat(2, 1fr); }
+            .stat-strip-item:nth-child(2) { border-right: none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" style="text-decoration: none;">
+                <h1 class="logo">port254</h1>
+            </a>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <div class="filters-section">
+        <div class="container">
+            <nav class="nav-menu" style="justify-content: center;">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="cii.html" class="nav-link">CII Regulations</a>
+                <a href="iec62443.html" class="nav-link">62443</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero">
+        <h1 class="hero-title">OT Cybersecurity Advisory</h1>
+        <p class="hero-subtitle">Kenya's CII Regulations are in force.</p>
+        <p class="hero-tagline">The compliance deadlines have passed. Most designated infrastructure operators haven't met them — we help close the gap.</p>
+        <p class="hero-description">IEC 62443-anchored advisory for Kenya's critical information infrastructure operators. Helping energy, water, transport, and financial sector CII owners meet their obligations under Legal Notice 44 of 2024.</p>
+        <div class="cta-buttons">
+            <a href="services.html" class="cta-button">View Services</a>
+            <a href="contact.html" class="cta-button secondary">Get in Touch</a>
+        </div>
+
+        <div class="compliance-alert" style="margin-top: 2.5rem; text-align: left;">
+            <div class="compliance-alert-dot"></div>
+            <p>The <strong>6-month policy deadline (Aug 2024)</strong> has passed. The <strong>annual risk assessment (Feb 2025)</strong> is overdue. <strong>24-hour incident reporting</strong> to the Sectoral COC is mandatory now. Most designated CII owners are already behind.</p>
+        </div>
+
+        <div class="stat-strip">
+            <div class="stat-strip-item">
+                <span class="stat-strip-value">9 Feb</span>
+                <span class="stat-strip-label">Regulations in force (2024)</span>
+            </div>
+            <div class="stat-strip-item">
+                <span class="stat-strip-value">24 hrs</span>
+                <span class="stat-strip-label">Incident reporting window</span>
+            </div>
+            <div class="stat-strip-item">
+                <span class="stat-strip-value">Annual</span>
+                <span class="stat-strip-label">Mandatory risk assessment</span>
+            </div>
+            <div class="stat-strip-item">
+                <span class="stat-strip-value">16</span>
+                <span class="stat-strip-label">Designated CII sectors</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features-section">
+        <div class="features-grid">
+            <!-- CII Risk Assessment -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                    </svg>
+                </div>
+                <div class="feature-reg">Reg 17 · Reg 31(2)(j)</div>
+                <h3 class="feature-title">CII Risk Assessment</h3>
+                <p class="feature-description">Annual mandatory cybersecurity risk assessment with risk register. Overdue for most designated operators. We deliver a structured assessment that satisfies the NC4 compliance requirement and gives your CISO a defensible risk posture.</p>
+                <a href="services.html" class="feature-link">Learn More →</a>
+            </div>
+
+            <!-- IEC 62443 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                    </svg>
+                </div>
+                <div class="feature-reg">Reg 31 · Reg 71(3)</div>
+                <h3 class="feature-title">IEC 62443 Gap Assessment</h3>
+                <p class="feature-description">Regulation 71(3) permits CII owners to adopt global best practices on their own initiative. IEC 62443 is the only international standard purpose-built for industrial control systems — and we hold all four certificates.</p>
+                <a href="iec62443.html" class="feature-link">View Credentials →</a>
+            </div>
+
+            <!-- CISO Advisory -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                    </svg>
+                </div>
+                <div class="feature-reg">Reg 32 · Reg 33</div>
+                <h3 class="feature-title">CISO Advisory</h3>
+                <p class="feature-description">Every designated CII owner must appoint a CISO. The qualification requirements are specific — and most organisations don't have a person who meets them. We help with CISO function design, policy development, and ongoing advisory support.</p>
+                <a href="services.html" class="feature-link">Learn More →</a>
+            </div>
+
+            <!-- Incident Response -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                    </svg>
+                </div>
+                <div class="feature-reg">Reg 65 · Reg 31(2)(m)</div>
+                <h3 class="feature-title">Incident Response Planning</h3>
+                <p class="feature-description">CII owners must report all cybersecurity incidents to the relevant Sectoral COC within 24 hours. Without an IR plan and tested procedures, most organisations cannot meet this obligation. We build and exercise the capability.</p>
+                <a href="services.html" class="feature-link">Learn More →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CII Regulations Banner -->
+    <div style="max-width: 1280px; margin: 0 auto 4rem; padding: 0 2rem;">
+        <div style="background: rgba(75, 139, 245, 0.05); border: 1px solid rgba(75, 139, 245, 0.15); border-radius: 0.75rem; padding: 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;">
+            <div>
+                <p style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #4B8BF5; margin-bottom: 0.5rem;">Legal Notice 44 of 2024</p>
+                <h3 style="font-size: 1.25rem; color: #f3f4f6; font-weight: 600; margin-bottom: 0.5rem;">Kenya's CII Regulations — What They Actually Require</h3>
+                <p style="color: #9ca3af; font-size: 0.925rem; line-height: 1.65; max-width: 560px;">Annual risk assessments. Mandatory CISO. 24-hour incident reporting. Data must stay in Kenya. Annual internal audits. NC4 compliance reports. Understand the full obligation stack before your audit notice arrives.</p>
+            </div>
+            <a href="cii.html" class="cta-button" style="flex-shrink: 0;">Read the Regulations →</a>
+        </div>
+    </div>
+
+    <!-- Sectors -->
+    <div style="max-width: 1280px; margin: 0 auto 4rem; padding: 0 2rem;">
+        <div style="border-top: 1px solid #2a2a2a; padding-top: 3rem;">
+            <h2 style="font-size: 1.25rem; color: #e5e7eb; font-weight: 600; margin-bottom: 0.5rem;">Sectors We Work With</h2>
+            <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 1.5rem;">Designated CII sectors under the Second Schedule of the Regulations.</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+                <div style="background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 0.5rem; padding: 1.25rem 1.5rem;">
+                    <p style="font-size: 0.875rem; font-weight: 600; color: #e5e7eb; margin-bottom: 0.35rem;">Energy</p>
+                    <p style="font-size: 0.8rem; color: #6b7280; line-height: 1.5;">Electricity generation, transmission/distribution, petroleum, natural gas</p>
+                </div>
+                <div style="background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 0.5rem; padding: 1.25rem 1.5rem;">
+                    <p style="font-size: 0.875rem; font-weight: 600; color: #e5e7eb; margin-bottom: 0.35rem;">Water</p>
+                    <p style="font-size: 0.8rem; color: #6b7280; line-height: 1.5;">Drinking water storage, distribution, quality assurance, wastewater treatment</p>
+                </div>
+                <div style="background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 0.5rem; padding: 1.25rem 1.5rem;">
+                    <p style="font-size: 0.875rem; font-weight: 600; color: #e5e7eb; margin-bottom: 0.35rem;">Transport</p>
+                    <p style="font-size: 0.8rem; color: #6b7280; line-height: 1.5;">Aviation, rail, road, maritime and port operations</p>
+                </div>
+                <div style="background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 0.5rem; padding: 1.25rem 1.5rem;">
+                    <p style="font-size: 0.875rem; font-weight: 600; color: #e5e7eb; margin-bottom: 0.35rem;">Financial Services</p>
+                    <p style="font-size: 0.8rem; color: #6b7280; line-height: 1.5;">Banking, payment systems, stock exchange</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p style="margin-bottom: 1rem;">Port254 &mdash; OT Cybersecurity Advisory</p>
+            <div style="display: flex; justify-content: center; gap: 1.5rem; margin-top: 1rem; flex-wrap: wrap; align-items: center;">
+                <a href="mailto:admin@port254.com" style="color: #9ca3af; text-decoration: none; transition: color 0.2s; font-size: 0.875rem;" onmouseover="this.style.color='#4B8BF5'" onmouseout="this.style.color='#9ca3af'">admin@port254.com</a>
+                <a href="https://github.com/254kamikaze" target="_blank" style="color: #9ca3af; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#4B8BF5'" onmouseout="this.style.color='#9ca3af'">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.25rem;">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
