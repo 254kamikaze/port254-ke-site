@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Security - port254 | Kenya CII Cybersecurity Advisory</title>
+    <meta name="description" content="AI red teaming and security advisory for organisations deploying AI systems. OffSec AI Red Teamer (OSAI) certified — adversarial testing, AI infrastructure security, and hardening guidance.">
+    <meta property="og:url" content="https://port254.co.ke/ai.html">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .osai-card {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            background-color: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .osai-card img {
+            width: 160px;
+            height: auto;
+            flex-shrink: 0;
+            border-radius: 0.5rem;
+        }
+
+        .osai-card-body {
+            flex: 1;
+            min-width: 260px;
+        }
+
+        .osai-card-body h3 {
+            color: #e5e7eb;
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 0.35rem;
+        }
+
+        .osai-issuer {
+            color: #4B8BF5;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.75rem;
+        }
+
+        .osai-card-body p {
+            color: #9ca3af;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" style="text-decoration: none;">
+                <h1 class="logo">port254</h1>
+            </a>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <div class="filters-section">
+        <div class="container">
+            <nav class="nav-menu" style="justify-content: center;">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="ai.html" class="nav-link active">AI</a>
+                <a href="cii.html" class="nav-link">CII Regulations</a>
+                <a href="cmca6.html" class="nav-link">CMCA 6</a>
+                <a href="iec62443.html" class="nav-link">62443</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="page-hero">
+        <h1>AI Security</h1>
+        <p>AI red teaming and security advisory for organisations deploying AI systems. As models, agents, and AI-enabled infrastructure move into production, they bring a new class of risk that traditional security testing doesn't cover.</p>
+    </div>
+
+    <!-- What We Offer -->
+    <div class="section" style="padding-top: 0;">
+        <h2 class="section-heading">What We Offer</h2>
+        <p class="section-subheading">Offensive security expertise combined with a deep understanding of AI architectures, applied to identify vulnerabilities and improve the resilience of AI deployments.</p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-card-number">01</div>
+                <h3>AI Model &amp; Pipeline Security Assessment</h3>
+                <p>Evaluation of AI models, data pipelines, and autonomous systems for security weaknesses — from training data integrity through to deployed model behaviour.</p>
+                <ul>
+                    <li>Model vulnerability and robustness assessment</li>
+                    <li>Data pipeline and training data integrity review</li>
+                    <li>Autonomous system and agent workflow assessment</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-number">02</div>
+                <h3>Adversarial Simulation</h3>
+                <p>Realistic adversarial testing against AI-enabled environments — simulating the techniques used to manipulate, extract from, or bypass AI system controls.</p>
+                <ul>
+                    <li>Prompt injection and jailbreak testing</li>
+                    <li>Model extraction and data leakage testing</li>
+                    <li>Adversarial input and evasion testing</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-number">03</div>
+                <h3>AI Infrastructure Security</h3>
+                <p>Security assessment of the infrastructure AI systems run on, including cloud environments and multi-agent systems where a single weak link can compromise the whole deployment.</p>
+                <ul>
+                    <li>Cloud AI infrastructure and API security review</li>
+                    <li>Multi-agent system and orchestration security</li>
+                    <li>Access control and privilege boundary assessment</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-card-number">04</div>
+                <h3>Hardening &amp; Advisory</h3>
+                <p>Actionable, prioritised guidance to strengthen AI systems against emerging threats — translating findings into a remediation programme your team can execute.</p>
+                <ul>
+                    <li>Risk-prioritised remediation roadmap</li>
+                    <li>Guardrail and control design review</li>
+                    <li>Ongoing advisory as AI deployments evolve</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certification -->
+    <div class="section" style="padding-top: 0;">
+        <h2 class="section-heading">Certification</h2>
+        <p class="section-subheading">This offering is backed by a recognised offensive-security credential specific to AI systems.</p>
+
+        <div class="osai-card">
+            <img src="./images/osai-badge.png" alt="OffSec AI Red Teamer (OSAI) certification badge">
+            <div class="osai-card-body">
+                <div class="osai-issuer">OffSec</div>
+                <h3>OffSec AI Red Teamer (OSAI)</h3>
+                <p>Awarded on completion of OffSec's Advanced AI Red Teaming (AI-300) course. OSAI-certified professionals demonstrate the ability to assess and challenge the security of modern AI systems — evaluating models, data pipelines, and autonomous systems; conducting adversarial simulations in AI-enabled environments; and assessing AI infrastructure including cloud and multi-agent systems.</p>
+                <a href="https://www.credential.net/cfef59fa-8ba9-4db1-a783-2d3f7f9f666a" target="_blank" style="color: #4B8BF5; font-size: 0.875rem; text-decoration: none; font-weight: 500;">Verify credential →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="section" style="padding-top: 0;">
+        <div class="cta-section">
+            <h3>Assessing an AI Deployment?</h3>
+            <p>Whether it's a single model in production or a multi-agent system running across your infrastructure, we can help you understand where the real risk sits.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="cta-button">Get in Touch</a>
+                <a href="services.html" class="cta-button secondary">View All Services</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p style="margin-bottom: 1rem;">port254 &middot; CII Cybersecurity Advisory</p>
+            <div style="display: flex; justify-content: center; gap: 1.5rem; margin-top: 1rem; flex-wrap: wrap; align-items: center;">
+                <a href="mailto:admin@port254.com" style="color: #9ca3af; text-decoration: none; transition: color 0.2s; font-size: 0.875rem;" onmouseover="this.style.color='#4B8BF5'" onmouseout="this.style.color='#9ca3af'">admin@port254.com</a>
+                <a href="https://github.com/254kamikaze" target="_blank" style="color: #9ca3af; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#4B8BF5'" onmouseout="this.style.color='#9ca3af'">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.25rem;">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

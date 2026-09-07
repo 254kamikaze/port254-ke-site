@@ -116,6 +116,31 @@ body {
     background-color: #3b73d1;
 }
 
+.cta-button {
+    display: inline-block;
+    background-color: #4B8BF5;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #3b73d1;
+}
+
+.cta-button.secondary {
+    background-color: #252525;
+    color: #e5e7eb;
+}
+
+.cta-button.secondary:hover {
+    background-color: #2f2f2f;
+}
+
 /* Filters & Navigation */
 .filters-section {
     background-color: #1a1a1a;
