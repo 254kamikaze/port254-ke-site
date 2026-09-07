@@ -9,50 +9,43 @@
     <link rel="icon" type="image/png" href="./images/favicon.png">
     <link rel="stylesheet" href="./css/style.css">
     <style>
-        .osai-card {
-            display: flex;
-            gap: 2rem;
+        .osai-badge-chip {
+            display: inline-flex;
             align-items: center;
-            background-color: #1a1a1a;
-            border: 1px solid #2a2a2a;
+            gap: 0.85rem;
+            margin-top: 1.75rem;
+            background: rgba(75, 139, 245, 0.08);
+            border: 1px solid rgba(75, 139, 245, 0.25);
             border-radius: 0.75rem;
-            padding: 2rem;
-            flex-wrap: wrap;
+            padding: 0.6rem 1.5rem 0.6rem 0.6rem;
+            text-decoration: none;
+            transition: border-color 0.2s;
         }
 
-        .osai-card img {
-            width: 160px;
+        .osai-badge-chip:hover {
+            border-color: #4B8BF5;
+        }
+
+        .osai-badge-chip img {
+            width: 52px;
             height: auto;
+            border-radius: 0.4rem;
             flex-shrink: 0;
-            border-radius: 0.5rem;
         }
 
-        .osai-card-body {
-            flex: 1;
-            min-width: 260px;
+        .osai-badge-chip-text {
+            text-align: left;
         }
 
-        .osai-card-body h3 {
-            color: #e5e7eb;
-            font-size: 1.15rem;
+        .osai-badge-chip-label {
+            color: #93c5fd;
+            font-size: 0.85rem;
             font-weight: 600;
-            margin-bottom: 0.35rem;
         }
 
-        .osai-issuer {
-            color: #4B8BF5;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            margin-bottom: 0.75rem;
-        }
-
-        .osai-card-body p {
-            color: #9ca3af;
-            font-size: 0.9rem;
-            line-height: 1.7;
-            margin-bottom: 1rem;
+        .osai-badge-chip-sub {
+            color: #6b7280;
+            font-size: 0.75rem;
         }
     </style>
 </head>
@@ -86,6 +79,13 @@
     <div class="page-hero">
         <h1>AI Security</h1>
         <p>AI red teaming and security advisory for organisations deploying AI systems. As models, agents, and AI-enabled infrastructure move into production, they bring a new class of risk that traditional security testing doesn't cover.</p>
+        <a class="osai-badge-chip" href="https://www.credential.net/cfef59fa-8ba9-4db1-a783-2d3f7f9f666a" target="_blank">
+            <img src="./images/osai-badge.png" alt="OffSec AI Red Teamer (OSAI) certification badge">
+            <span class="osai-badge-chip-text">
+                <span class="osai-badge-chip-label">Certified: OffSec AI Red Teamer (OSAI)</span><br>
+                <span class="osai-badge-chip-sub">Advanced AI Red Teaming (AI-300) &middot; Verify credential →</span>
+            </span>
+        </a>
     </div>
 
     <!-- What We Offer -->
@@ -118,40 +118,13 @@
 
             <div class="service-card">
                 <div class="service-card-number">03</div>
-                <h3>AI Infrastructure Security</h3>
-                <p>Security assessment of the infrastructure AI systems run on, including cloud environments and multi-agent systems where a single weak link can compromise the whole deployment.</p>
+                <h3>AI Infrastructure Security &amp; Hardening</h3>
+                <p>Security assessment of the infrastructure AI systems run on, including cloud environments and multi-agent systems, paired with actionable, prioritised guidance to close what we find.</p>
                 <ul>
                     <li>Cloud AI infrastructure and API security review</li>
                     <li>Multi-agent system and orchestration security</li>
-                    <li>Access control and privilege boundary assessment</li>
+                    <li>Risk-prioritised remediation roadmap and ongoing advisory</li>
                 </ul>
-            </div>
-
-            <div class="service-card">
-                <div class="service-card-number">04</div>
-                <h3>Hardening &amp; Advisory</h3>
-                <p>Actionable, prioritised guidance to strengthen AI systems against emerging threats — translating findings into a remediation programme your team can execute.</p>
-                <ul>
-                    <li>Risk-prioritised remediation roadmap</li>
-                    <li>Guardrail and control design review</li>
-                    <li>Ongoing advisory as AI deployments evolve</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <!-- Certification -->
-    <div class="section" style="padding-top: 0;">
-        <h2 class="section-heading">Certification</h2>
-        <p class="section-subheading">This offering is backed by a recognised offensive-security credential specific to AI systems.</p>
-
-        <div class="osai-card">
-            <img src="./images/osai-badge.png" alt="OffSec AI Red Teamer (OSAI) certification badge">
-            <div class="osai-card-body">
-                <div class="osai-issuer">OffSec</div>
-                <h3>OffSec AI Red Teamer (OSAI)</h3>
-                <p>Awarded on completion of OffSec's Advanced AI Red Teaming (AI-300) course. OSAI-certified professionals demonstrate the ability to assess and challenge the security of modern AI systems — evaluating models, data pipelines, and autonomous systems; conducting adversarial simulations in AI-enabled environments; and assessing AI infrastructure including cloud and multi-agent systems.</p>
-                <a href="https://www.credential.net/cfef59fa-8ba9-4db1-a783-2d3f7f9f666a" target="_blank" style="color: #4B8BF5; font-size: 0.875rem; text-decoration: none; font-weight: 500;">Verify credential →</a>
             </div>
         </div>
     </div>
