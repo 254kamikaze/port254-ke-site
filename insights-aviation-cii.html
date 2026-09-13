@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Legal Notice 44 Requires of Aviation &amp; Transport CII - port254</title>
+    <meta name="description" content="What Kenya's CII Regulations specifically require of airport, port and rail operators, and where the operational-technology gap actually sits.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://port254.co.ke/insights-aviation-cii.html">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .article-wrap { max-width: 760px; margin: 0 auto; padding: 3.5rem 1.5rem 5rem; }
+        .article-meta {
+            font-size: 0.8rem; color: #64748B; margin-bottom: 1rem; display: flex; gap: 0.6rem; align-items: center;
+        }
+        .article-meta .tag {
+            font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+            color: #E8630A; background: rgba(232, 99, 10, 0.08); border: 1px solid rgba(232, 99, 10, 0.2);
+            border-radius: 0.25rem; padding: 0.15rem 0.5rem;
+        }
+        .article-wrap h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); color: #0D1E38; line-height: 1.2; margin-bottom: 1rem; }
+        .article-lede { font-size: 1.1rem; color: #4A5568; line-height: 1.7; margin-bottom: 2.5rem; }
+        .article-body h2 { font-size: 1.3rem; color: #0D1E38; margin: 2.2rem 0 0.9rem; }
+        .article-body p { font-size: 1rem; color: #2D3748; line-height: 1.85; margin-bottom: 1.1rem; }
+        .article-body ul { margin: 0 0 1.1rem 1.25rem; }
+        .article-body li { font-size: 1rem; color: #2D3748; line-height: 1.75; margin-bottom: 0.5rem; }
+        .article-body strong { color: #0D1E38; }
+        .article-callout {
+            background: #F4F6F8; border-left: 3px solid #E8630A; border-radius: 0 0.5rem 0.5rem 0;
+            padding: 1.1rem 1.4rem; margin: 1.75rem 0; font-size: 0.95rem; color: #4A5568; line-height: 1.7;
+        }
+        .article-author {
+            display: flex; align-items: center; gap: 0.75rem; margin-top: 3rem; padding-top: 1.75rem;
+            border-top: 1px solid #E2E8F0; font-size: 0.9rem; color: #4A5568;
+        }
+        .article-author strong { color: #0D1E38; }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="topbar">
+        <span>ISA/IEC 62443 Expert-Certified</span>
+        <span class="topbar-sep">&middot;</span>
+        <a href="mailto:admin@port254.com">admin@port254.com</a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">port254</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="expertise.html" class="nav-link">Expertise</a></li>
+                <li><a href="industries.html" class="nav-link">Industries</a></li>
+                <li><a href="insights.html" class="nav-link active">Insights</a></li>
+                <li><a href="capability-statement.html" class="nav-link">Capability Statement</a></li>
+                <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article class="article-wrap">
+        <div class="article-meta">
+            <span class="tag">Regulatory</span>
+            <span>14 September 2026</span>
+            <span>&middot;</span>
+            <span>Tony Kirui</span>
+        </div>
+        <h1>What Legal Notice 44 Actually Requires of Aviation and Transport CII</h1>
+        <p class="article-lede">Transport is one of the sectors named in the Second Schedule to Kenya's CII Regulations, alongside energy, water, ICT and financial services. Most of what's been written about the Regulations treats every sector the same way. An airport, port, or rail operator's obligations aren't generic &mdash; they sit on top of an operational-technology environment with its own physical-safety stakes and its own supply-chain complexity. Here's what actually applies, and where the gap usually sits.</p>
+
+        <div class="article-body">
+            <h2>Two regulations that matter more here than elsewhere</h2>
+            <p><strong>Regulation 39(d)</strong> requires designated CII owners to adopt procedures for regular security audits and penetration testing, and it names virtual and remote access explicitly as an area requiring control. For an airport or port operator, virtual access is not a single, well-defined boundary the way it might be for a standalone data centre. Ground handlers, airlines, customs systems, air navigation service providers, fuelling contractors and baggage-system vendors all connect into operational networks that sit adjacent to, or sometimes directly alongside, passenger and administrative IT. Regulation 39(d) is, in effect, asking whether you actually know where every one of those connections terminates.</p>
+            <p><strong>Regulation 31(2)</strong> sets the baseline security requirements: asset identification and classification, personnel vetting, a cybersecurity awareness programme, and participation in cross-sector exercises. For transport CII, asset identification is the item operators most often get wrong &mdash; not because it's neglected, but because ground systems, navigation systems, and building-management systems are frequently managed by different teams, different vendors, and different maintenance contracts, with no single asset register that spans all of them.</p>
+
+            <h2>What's structurally different about airport and transport OT</h2>
+            <p>Energy and water CII security discussions tend to focus on SCADA and process control in a relatively contained operational boundary: one operator, one or a small number of control rooms. Transport &mdash; and aviation in particular &mdash; is different in a way that matters for how you scope an assessment:</p>
+            <ul>
+                <li><strong>Multiple independent stakeholders share the same physical and network environment.</strong> An airport operator doesn't fully control every system running on its site; airlines, ground handling companies, and government agencies operate their own systems on the same premises.</li>
+                <li><strong>Physical-safety systems and IT-adjacent systems are more tightly coupled.</strong> Runway and ground lighting control, baggage handling, and access control systems increasingly report into the same networks as administrative and passenger-facing IT, without always having been designed with that convergence in mind.</li>
+                <li><strong>The vendor and system-integrator footprint is unusually large.</strong> A single terminal can have separate vendors for baggage handling, access control, fuel management, and building management &mdash; each with their own remote-access arrangement into the network.</li>
+            </ul>
+            <p>None of this is unique to Kenya. It's a structural feature of aviation and transport environments everywhere. What Legal Notice 44 does is make addressing it a legal obligation rather than a discretionary good practice.</p>
+
+            <div class="article-callout">Form CMCA 6, the prescribed NC4 audit template, examines network security first (&sect;3.1): firewall configuration, intrusion detection, network access control, and VLAN segmentation. For a transport operator, that section can't be answered meaningfully without first mapping which of the systems described above sit on which network segment &mdash; which is exactly the zone-and-conduit exercise IEC 62443 was built for.</p></div>
+
+            <h2>Why IEC 62443 is the right anchor here, specifically</h2>
+            <p>Regulation 71(3) allows CII owners to adopt global best-practice standards on their own initiative. For transport CII, the case for IEC 62443 is stronger than for most sectors, precisely because of the multi-vendor, multi-stakeholder environment described above. The standard's zone-and-conduit model exists to answer exactly this question &mdash; which systems belong in which trust boundary, and what's allowed to cross between them &mdash; and its supply-chain provisions (62443-2-4 for service providers, 62443-4-1 for product suppliers) give an operator a defensible basis for holding baggage-system, access-control, and ground-services vendors to a consistent security standard, rather than negotiating it contract by contract.</p>
+
+            <h2>Where to start</h2>
+            <p>Not with a penetration test, and not with a policy rewrite. The first defensible step for a transport CII owner is the same one Regulation 31(2)(a) already requires: a complete, classified asset inventory spanning every operational system on the site, regardless of which vendor or department manages it, followed by a zone-and-conduit model showing how those systems actually connect. Everything else &mdash; the Regulation 39(d) testing programme, the Form CMCA 6 audit readiness, the IEC 62443 gap assessment &mdash; depends on having that map first. Most operators we've reviewed don't yet have one that spans the whole site.</p>
+        </div>
+
+        <div class="article-author">
+            <div>Written by <strong>Tony Kirui</strong>, Principal Advisor at port254. ISA/IEC 62443 Expert, CISSP, OSCP, OSEP. <a href="about.html">More about Tony →</a></div>
+        </div>
+    </article>
+
+    <!-- CTA -->
+    <div class="section" style="padding-top: 0;">
+        <div class="cta-section">
+            <h3>Operate Airport, Port or Rail Infrastructure?</h3>
+            <p>We start with the asset inventory and zone/conduit model &mdash; the foundation every subsequent obligation depends on.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="cta-button">Get in Touch</a>
+                <a href="industries.html" class="cta-button secondary">View Industries</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo">port254</div>
+                <p>Principal-led OT/ICS and critical-infrastructure cybersecurity advisory for Africa, grounded in IEC 62443 and international critical-infrastructure practice.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="expertise.html">Expertise</a></li>
+                    <li><a href="industries.html">Industries</a></li>
+                    <li><a href="insights.html">Insights</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Regulatory Detail</h4>
+                <ul>
+                    <li><a href="cii.html">CII Regulations</a></li>
+                    <li><a href="cmca6.html">Form CMCA 6</a></li>
+                    <li><a href="iec62443.html">IEC 62443</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:admin@port254.com">admin@port254.com</a></li>
+                    <li><a href="capability-statement.html">Capability Statement</a></li>
+                </ul>
+                <a href="contact.html" class="footer-cta">Get in Touch →</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 port254 &middot; OT &amp; Critical Infrastructure Cybersecurity Advisory</span>
+            <span><a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms</a></span>
+        </div>
+    </footer>
+</body>
+</html>

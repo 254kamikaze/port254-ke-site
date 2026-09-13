@@ -3,13 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - port254 | Kenya CII Cybersecurity Advisory</title>
-    <meta name="description" content="CII cybersecurity advisory at the intersection of IEC 62443 and Kenya's Critical Information Infrastructure Regulations. ISA/IEC 62443 Expert-certified, CISSP, OSCP, OSEP.">
+    <title>About - port254 | OT &amp; Critical Infrastructure Cybersecurity</title>
+    <meta name="description" content="Port254 is the principal-led OT/ICS and critical-infrastructure cybersecurity advisory of Tony Kirui &mdash; ISA/IEC 62443 Expert, CISSP, OSCP, OSEP, CCNP, OSAI.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://port254.co.ke/about.html">
     <link rel="icon" type="image/png" href="./images/favicon.png">
     <link rel="stylesheet" href="./css/style.css">
     <style>
+        .principal-section {
+            display: grid; grid-template-columns: auto 1fr; gap: 2rem; align-items: start;
+        }
+        .principal-mark {
+            width: 84px; height: 84px; border-radius: 10px; background: #0D1E38; color: #fff;
+            display: flex; align-items: center; justify-content: center; font-family: 'Courier New', monospace;
+            font-size: 1.9rem; font-weight: 700; flex-shrink: 0;
+        }
+        .principal-name { font-size: 1.4rem; font-weight: 700; color: #0D1E38; margin-bottom: 0.2rem; }
+        .principal-role { font-size: 0.9rem; color: #E8630A; font-weight: 600; margin-bottom: 1rem; }
+        .principal-bio p { color: #4A5568; font-size: 0.975rem; line-height: 1.8; margin-bottom: 1rem; }
+        @media (max-width: 600px) {
+            .principal-section { grid-template-columns: 1fr; }
+        }
+
         .principle-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -86,6 +101,11 @@
             line-height: 1.5;
         }
 
+        .credential-verify {
+            font-size: 0.75rem; color: #E8630A; text-decoration: none; font-weight: 600; margin-top: 0.15rem;
+        }
+        .credential-verify:hover { text-decoration: underline; }
+
         @media (max-width: 768px) {
             .principle-grid,
             .credential-grid {
@@ -109,11 +129,10 @@
             <ul class="nav-links">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link active">About</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="ai.html" class="nav-link">AI</a></li>
-                <li><a href="cii.html" class="nav-link">CII Regulations</a></li>
-                <li><a href="cmca6.html" class="nav-link">CMCA 6</a></li>
-                <li><a href="iec62443.html" class="nav-link">62443</a></li>
+                <li><a href="expertise.html" class="nav-link">Expertise</a></li>
+                <li><a href="industries.html" class="nav-link">Industries</a></li>
+                <li><a href="insights.html" class="nav-link">Insights</a></li>
+                <li><a href="capability-statement.html" class="nav-link">Capability Statement</a></li>
                 <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
             </ul>
         </div>
@@ -124,7 +143,26 @@
         <div class="page-hero-inner">
             <div class="breadcrumb"><a href="index.html">Home</a><span>&rsaquo;</span>About</div>
             <h1>About Port254</h1>
-            <p>CII cybersecurity advisory at the intersection of IEC 62443 and Kenya's Critical Information Infrastructure Regulations, where technical security meets regulatory obligation.</p>
+            <p>OT/ICS and critical-infrastructure cybersecurity advisory at the intersection of IEC 62443 and Kenya's Critical Information Infrastructure Regulations, where technical security meets regulatory obligation.</p>
+        </div>
+    </div>
+
+    <!-- Principal -->
+    <div class="section" style="padding-top: 0;">
+        <h2 class="section-heading">Principal</h2>
+        <p class="section-subheading">Port254 is principal-led, not a delivery pipeline &mdash; the person who scopes the engagement is the person who does the work.</p>
+
+        <div class="principal-section">
+            <div class="principal-mark">TK</div>
+            <div>
+                <div class="principal-name">Tony Kirui</div>
+                <div class="principal-role">Principal Advisor, port254</div>
+                <div class="principal-bio">
+                    <p>More than two decades across networking, infrastructure and cybersecurity. Tony currently operates at Principal Advisor/Consultant level in Australia, working directly with critical infrastructure and operational-technology environments &mdash; the same class of systems Kenya's designated CII operators run.</p>
+                    <p>He holds an MSc in Computer Science, is ISA/IEC 62443 Expert-certified across all four domains (fundamentals, risk assessment, system design, and maintenance), and contributes to ISA/IEC 62443 standards working groups. His networking background is CCNP-certified; his offensive-security background is OSCP and OSEP; and he holds OffSec's AI Red Teamer (OSAI) certification for assessing AI systems entering operational environments. He is also a CISSP.</p>
+                    <p>Port254 exists to apply that combination &mdash; OT/ICS engineering depth, international standards practice, and offensive-security grounding &mdash; directly to Africa's critical infrastructure, starting in Kenya.</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -150,28 +188,38 @@
     <!-- Credentials -->
     <div class="section" style="padding-top: 0;">
         <h2 class="section-heading">Credentials</h2>
-        <p class="section-subheading">port254 engagements are delivered by practitioners certified across the full CII security lifecycle, from regulatory compliance and risk assessment through to offensive security and industrial control system design.</p>
+        <p class="section-subheading">port254 engagements are delivered by a practitioner certified across the full CII security lifecycle, from regulatory compliance and risk assessment through to offensive security, networking, and AI system security.</p>
 
         <div class="credential-grid">
             <div class="credential-card">
                 <span class="credential-name">ISA/IEC 62443 Expert</span>
                 <span class="credential-body">All four certificates: Fundamentals, Risk Assessment, Design, Maintenance</span>
+                <a class="credential-verify" href="https://connect.isa.org/resources/credentialdirectory" target="_blank" rel="noopener">Verify via ISA Credential Directory →</a>
             </div>
             <div class="credential-card">
                 <span class="credential-name">CISSP</span>
                 <span class="credential-body">Certified Information Systems Security Professional</span>
+                <a class="credential-verify" href="https://my.isc2.org/s/MemberVerification" target="_blank" rel="noopener">Verify via (ISC)&sup2; →</a>
             </div>
             <div class="credential-card">
                 <span class="credential-name">OSCP</span>
                 <span class="credential-body">Offensive Security Certified Professional</span>
+                <a class="credential-verify" href="https://help.offsec.com/hc/en-us/articles/360040160152-How-do-I-verify-someone-s-certification" target="_blank" rel="noopener">How OffSec verifies →</a>
             </div>
             <div class="credential-card">
                 <span class="credential-name">OSEP</span>
                 <span class="credential-body">Offensive Security Experienced Penetration Tester</span>
+                <a class="credential-verify" href="https://help.offsec.com/hc/en-us/articles/360040160152-How-do-I-verify-someone-s-certification" target="_blank" rel="noopener">How OffSec verifies →</a>
+            </div>
+            <div class="credential-card">
+                <span class="credential-name">CCNP</span>
+                <span class="credential-body">Cisco Certified Network Professional</span>
+                <a class="credential-verify" href="https://cisco.com/go/certifications/verify" target="_blank" rel="noopener">Verify via Cisco →</a>
             </div>
             <div class="credential-card">
                 <span class="credential-name">OSAI</span>
                 <span class="credential-body">OffSec AI Red Teamer &mdash; Advanced AI Red Teaming (AI-300)</span>
+                <a class="credential-verify" href="https://www.credential.net/cfef59fa-8ba9-4db1-a783-2d3f7f9f666a" target="_blank" rel="noopener">Verify credential →</a>
             </div>
         </div>
     </div>
@@ -179,42 +227,15 @@
     <!-- Sectors -->
     <div class="section" style="padding-top: 0;">
         <h2 class="section-heading">Sectors</h2>
-        <p class="section-subheading">We work with operators across Kenya's designated CII sectors where the security of operational infrastructure directly impacts safety, service delivery, and national resilience.</p>
-
-        <div class="expertise-grid">
-            <div class="expertise-item">
-                <h4>Energy</h4>
-                <p>Power generation, transmission and distribution, and petroleum/gas networks. SCADA (Supervisory Control and Data Acquisition), energy management systems (EMS), and DCS (Distributed Control Systems) security. KenGen, KPLC (Kenya Power), KETRACO and sector peers.</p>
-            </div>
-            <div class="expertise-item">
-                <h4>Water &amp; Wastewater</h4>
-                <p>Water treatment, distribution, and wastewater management systems. Process control and remote site security across county and national water authorities.</p>
-            </div>
-            <div class="expertise-item">
-                <h4>Transport</h4>
-                <p>Rail, aviation, maritime, and road transport control systems. Signalling, fleet management, port operations, and air navigation security.</p>
-            </div>
-            <div class="expertise-item">
-                <h4>Financial Services</h4>
-                <p>Banking infrastructure, payment systems, and stock exchange technology. Critical systems underpinning Kenya's financial market integrity.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Why Kenya -->
-    <div class="section" style="padding-top: 0;">
-        <div style="background: rgba(232, 99, 10, 0.06); border: 1px solid rgba(232, 99, 10, 0.2); border-radius: 0.75rem; padding: 1.75rem 2rem;">
-            <h3 style="font-size: 1.1rem; color: #0D1E38; font-weight: 600; margin-bottom: 1rem;">Why CII Security in Kenya Now</h3>
-            <p style="color: #4A5568; font-size: 0.975rem; line-height: 1.85; margin: 0 0 1rem;">Kenya's energy, water, and transport infrastructure is undergoing rapid modernisation. World Bank and development finance institution (DFI)-funded SCADA upgrades, smart grid deployments, and digital transformation programmes are connecting operational technology environments that were previously air-gapped, expanding the attack surface at the same time that Kenya's CII Regulations create enforceable compliance obligations.</p>
-            <p style="color: #4A5568; font-size: 0.975rem; line-height: 1.85; margin: 0;">The gap between IT security maturity and OT security maturity is significant. Most critical infrastructure operators have IT security functions. Very few have OT-specific capability. IEC 62443, combined with the CII regulatory framework, provides the structure to close that gap systematically.</p>
-        </div>
+        <p class="section-subheading">We work with operators across Kenya's designated CII sectors &mdash; energy, water, transport, and financial services &mdash; where the security of operational infrastructure directly impacts safety, service delivery, and national resilience.</p>
+        <p style="margin-top: 1.25rem; color: #64748B; font-size: 0.875rem;">Sector-specific detail: <a href="industries.html" style="color: #E8630A; text-decoration: none;">view Industries →</a></p>
     </div>
 
     <!-- CTA -->
     <div class="section" style="padding-top: 0;">
         <div class="cta-section">
             <h3>Work With Us</h3>
-            <p>Looking for CII cybersecurity advisory in Kenya? Let's discuss how port254 can help your organisation meet its obligations and secure its critical infrastructure.</p>
+            <p>Looking for OT/ICS and critical-infrastructure cybersecurity advisory in Kenya? Let's discuss how port254 can help your organisation secure its operational infrastructure and meet its regulatory obligations.</p>
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                 <a href="services.html" class="cta-button">View Services</a>
                 <a href="contact.html" class="cta-button secondary">Get in Touch</a>
@@ -227,18 +248,19 @@
         <div class="footer-inner">
             <div class="footer-brand">
                 <div class="footer-logo">port254</div>
-                <p>CII cybersecurity advisory for Kenya's critical infrastructure operators, anchored to IEC 62443 and the CII Regulations (Legal Notice 44 of 2024).</p>
+                <p>Principal-led OT/ICS and critical-infrastructure cybersecurity advisory for Africa, grounded in IEC 62443 and international critical-infrastructure practice.</p>
             </div>
             <div class="footer-col">
-                <h4>Site</h4>
+                <h4>Company</h4>
                 <ul>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="ai.html">AI Security</a></li>
+                    <li><a href="expertise.html">Expertise</a></li>
+                    <li><a href="industries.html">Industries</a></li>
+                    <li><a href="insights.html">Insights</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Regulatory</h4>
+                <h4>Regulatory Detail</h4>
                 <ul>
                     <li><a href="cii.html">CII Regulations</a></li>
                     <li><a href="cmca6.html">Form CMCA 6</a></li>
@@ -249,13 +271,14 @@
                 <h4>Contact</h4>
                 <ul>
                     <li><a href="mailto:admin@port254.com">admin@port254.com</a></li>
-                    <li><a href="https://github.com/254kamikaze" target="_blank">GitHub</a></li>
+                    <li><a href="capability-statement.html">Capability Statement</a></li>
                 </ul>
                 <a href="contact.html" class="footer-cta">Get in Touch →</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <span>&copy; 2026 port254 &middot; CII Cybersecurity Advisory</span>
+            <span>&copy; 2026 port254 &middot; OT &amp; Critical Infrastructure Cybersecurity Advisory</span>
+            <span><a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms</a></span>
         </div>
     </footer>
 </body>
