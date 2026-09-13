@@ -13,40 +13,51 @@
     <link rel="stylesheet" href="./css/style.css">
     <style>
         .hero {
+            background: linear-gradient(120deg, #0A1A30 0%, #1A3458 100%);
             text-align: center;
-            padding: 6rem 2rem 2rem;
-            max-width: 900px;
+            padding: 4.5rem 1.5rem 3.5rem;
+        }
+
+        .hero-inner {
+            max-width: 820px;
             margin: 0 auto;
         }
 
         .hero-title {
-            font-size: 3.5rem;
-            color: #4B8BF5;
+            font-size: clamp(2.1rem, 5vw, 3.1rem);
+            color: #fff;
             margin-bottom: 1rem;
-            font-weight: 700;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+            line-height: 1.15;
+        }
+
+        .hero-title em {
+            color: #E8630A;
+            font-style: normal;
         }
 
         .hero-subtitle {
-            font-size: 1.5rem;
-            color: #d1d5db;
+            font-size: 1.3rem;
+            color: #cfe0ee;
             margin-bottom: 0.5rem;
             font-weight: 400;
         }
 
         .hero-tagline {
             font-size: 1rem;
-            color: #6b7280;
-            margin-bottom: 2.5rem;
-            letter-spacing: 0.04em;
+            color: #9fb8ce;
+            margin-bottom: 2rem;
+            letter-spacing: 0.02em;
             line-height: 1.6;
         }
 
         .hero-description {
-            font-size: 1.125rem;
-            color: #9ca3af;
-            line-height: 1.8;
-            max-width: 700px;
-            margin: 0 auto 3rem;
+            font-size: 1.05rem;
+            color: #9fb8ce;
+            line-height: 1.75;
+            max-width: 680px;
+            margin: 0 auto 2.5rem;
         }
 
         .cta-buttons {
@@ -60,44 +71,57 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 1rem 2rem;
-            background: rgba(96, 165, 250, 0.1);
-            border: 2px solid #4B8BF5;
-            border-radius: 0.5rem;
-            color: #4B8BF5;
+            padding: 0.9rem 1.75rem;
+            background: #E8630A;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
             text-decoration: none;
-            font-weight: 600;
-            transition: all 0.2s;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.15s;
+            box-shadow: 0 4px 20px rgba(232, 99, 10, 0.3);
         }
 
         .cta-button:hover {
-            background: rgba(96, 165, 250, 0.2);
+            background: #C9520A;
             transform: translateY(-2px);
         }
 
         .cta-button.secondary {
-            border-color: #2a2a2a;
-            color: #d1d5db;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1.5px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+            box-shadow: none;
         }
 
         .cta-button.secondary:hover {
-            border-color: #4B8BF5;
-            color: #4B8BF5;
+            background: rgba(255, 255, 255, 0.16);
         }
 
+        .hero-note {
+            font-size: 0.85rem;
+            color: #7a9bb5;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.25rem;
+        }
+
+        .stats-bar {
+            background: #0D1E38;
+        }
 
         .stat-strip {
+            max-width: 1200px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            border-top: 1px solid #2a2a2a;
-            border-bottom: 1px solid #2a2a2a;
-            margin: 3rem 0 0;
         }
 
         .stat-strip-item {
-            padding: 1.5rem;
+            padding: 1.75rem 1rem;
             text-align: center;
-            border-right: 1px solid #2a2a2a;
+            border-right: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .stat-strip-item:last-child {
@@ -105,51 +129,52 @@
         }
 
         .stat-strip-value {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #4B8BF5;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #E8630A;
             display: block;
             margin-bottom: 0.25rem;
         }
 
         .stat-strip-label {
             font-size: 0.75rem;
-            color: #6b7280;
+            color: #9fb8ce;
             text-transform: uppercase;
             letter-spacing: 0.06em;
         }
 
         .features-section {
-            max-width: 1280px;
+            max-width: 1200px;
             margin: 4rem auto;
-            padding: 0 2rem;
+            padding: 0 1.5rem;
         }
 
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: 1.5rem;
+            margin-top: 2.5rem;
         }
 
         .feature-card {
-            background: rgba(59, 130, 246, 0.05);
-            border: 1px solid #2a2a2a;
-            border-radius: 0.75rem;
-            padding: 2rem;
-            transition: all 0.3s;
+            background: #F4F6F8;
+            border: 1.5px solid #E2E8F0;
+            border-radius: 12px;
+            padding: 1.75rem;
+            transition: all 0.2s;
         }
 
         .feature-card:hover {
-            border-color: #4B8BF5;
-            transform: translateY(-4px);
+            border-color: #E8630A;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(13, 30, 56, 0.1);
         }
 
         .feature-title {
-            font-size: 1.125rem;
-            color: #e5e7eb;
+            font-size: 1.05rem;
+            color: #0D1E38;
             margin-bottom: 0.5rem;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .feature-reg {
@@ -157,20 +182,20 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.08em;
-            color: #4B8BF5;
+            color: #E8630A;
             margin-bottom: 0.75rem;
         }
 
         .feature-description {
-            color: #9ca3af;
+            color: #4A5568;
             line-height: 1.65;
             font-size: 0.9rem;
         }
 
         .feature-link {
-            color: #4B8BF5;
+            color: #E8630A;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
@@ -183,53 +208,55 @@
         }
 
         @media (max-width: 768px) {
-            .hero-title { font-size: 2.5rem; }
-            .hero-subtitle { font-size: 1.25rem; }
             .features-grid { grid-template-columns: 1fr; }
             .stat-strip { grid-template-columns: repeat(2, 1fr); }
             .stat-strip-item:nth-child(2) { border-right: none; }
+            .stat-strip-item:nth-child(1), .stat-strip-item:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.08); }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <a href="index.html" style="text-decoration: none;">
-                <h1 class="logo">port254</h1>
-            </a>
-        </div>
-    </header>
+    <!-- Top Bar -->
+    <div class="topbar">
+        <span>ISA/IEC 62443 Expert-Certified</span>
+        <span class="topbar-sep">&middot;</span>
+        <a href="mailto:admin@port254.com">admin@port254.com</a>
+    </div>
 
     <!-- Navigation -->
-    <div class="filters-section">
-        <div class="container">
-            <nav class="nav-menu" style="justify-content: center;">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="services.html" class="nav-link">Services</a>
-                <a href="ai.html" class="nav-link">AI</a>
-                <a href="cii.html" class="nav-link">CII Regulations</a>
-                <a href="cmca6.html" class="nav-link">CMCA 6</a>
-                <a href="iec62443.html" class="nav-link">62443</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-            </nav>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">port254</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="ai.html" class="nav-link">AI</a></li>
+                <li><a href="cii.html" class="nav-link">CII Regulations</a></li>
+                <li><a href="cmca6.html" class="nav-link">CMCA 6</a></li>
+                <li><a href="iec62443.html" class="nav-link">62443</a></li>
+                <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+            </ul>
         </div>
-    </div>
+    </nav>
 
     <!-- Hero -->
     <div class="hero">
-        <h1 class="hero-title">CII Cybersecurity Advisory</h1>
-        <p class="hero-subtitle">Kenya's Critical Information Infrastructure (CII) Regulations are in force.</p>
-        <p class="hero-tagline">The compliance deadlines have passed. Most designated infrastructure operators haven't met them. We help close the gap.</p>
-        <p class="hero-description">We work with Kenya's designated CII operators on the operational technology layer that IT security firms don't cover. SCADA systems, energy management systems, industrial control systems. Every engagement is built around the mandatory compliance obligations: annual risk assessment, CISO designation, and NC4 audit readiness.</p>
-        <div class="cta-buttons">
-            <a href="services.html" class="cta-button">View Services</a>
-            <a href="contact.html" class="cta-button secondary">Get in Touch</a>
+        <div class="hero-inner">
+            <h1 class="hero-title">CII <em>Cybersecurity Advisory</em></h1>
+            <p class="hero-subtitle">Kenya's Critical Information Infrastructure (CII) Regulations are in force.</p>
+            <p class="hero-tagline">The compliance deadlines have passed. Most designated infrastructure operators haven't met them. We help close the gap.</p>
+            <p class="hero-description">We work with Kenya's designated CII operators on the operational technology layer that IT security firms don't cover. SCADA systems, energy management systems, industrial control systems. Every engagement is built around the mandatory compliance obligations: annual risk assessment, CISO designation, and NC4 audit readiness.</p>
+            <div class="cta-buttons">
+                <a href="services.html" class="cta-button">View Services</a>
+                <a href="contact.html" class="cta-button secondary">Get in Touch</a>
+            </div>
+            <p class="hero-note">Policy deadline (Aug 2024) passed. Annual risk assessment (Feb 2025) overdue. Most designated CII owners are already behind.</p>
         </div>
+    </div>
 
-        <p style="font-size: 0.85rem; color: #6b7280; margin-top: 2rem; border-top: 1px solid #2a2a2a; padding-top: 1.25rem;">Policy deadline (Aug 2024) passed. Annual risk assessment (Feb 2025) overdue. Most designated CII owners are already behind.</p>
-
+    <!-- Stats -->
+    <div class="stats-bar">
         <div class="stat-strip">
             <div class="stat-strip-item">
                 <span class="stat-strip-value">9 Feb</span>
@@ -289,11 +316,11 @@
 
     <!-- CII Regulations Banner -->
     <div style="max-width: 1280px; margin: 0 auto 4rem; padding: 0 2rem;">
-        <div style="background: rgba(75, 139, 245, 0.05); border: 1px solid rgba(75, 139, 245, 0.15); border-radius: 0.75rem; padding: 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;">
+        <div style="background: rgba(232, 99, 10, 0.05); border: 1px solid rgba(232, 99, 10, 0.15); border-radius: 0.75rem; padding: 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;">
             <div>
-                <p style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #4B8BF5; margin-bottom: 0.5rem;">Legal Notice 44 of 2024</p>
-                <h3 style="font-size: 1.25rem; color: #f3f4f6; font-weight: 600; margin-bottom: 0.5rem;">Kenya's CII Regulations: What They Actually Require</h3>
-                <p style="color: #9ca3af; font-size: 0.925rem; line-height: 1.65; max-width: 560px;">Annual risk assessments. Mandatory CISO. 24-hour incident reporting. Data must stay in Kenya. Annual internal audits. Formal compliance audits by the enforcement authority. Understand the full obligation stack before a directive lands.</p>
+                <p style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #E8630A; margin-bottom: 0.5rem;">Legal Notice 44 of 2024</p>
+                <h3 style="font-size: 1.25rem; color: #0D1E38; font-weight: 600; margin-bottom: 0.5rem;">Kenya's CII Regulations: What They Actually Require</h3>
+                <p style="color: #4A5568; font-size: 0.925rem; line-height: 1.65; max-width: 560px;">Annual risk assessments. Mandatory CISO. 24-hour incident reporting. Data must stay in Kenya. Annual internal audits. Formal compliance audits by the enforcement authority. Understand the full obligation stack before a directive lands.</p>
             </div>
             <a href="cii.html" class="cta-button" style="flex-shrink: 0;">Read the Regulations →</a>
         </div>
@@ -301,44 +328,65 @@
 
     <!-- Sectors -->
     <div style="max-width: 1280px; margin: 0 auto 4rem; padding: 0 2rem;">
-        <div style="border-top: 1px solid #2a2a2a; padding-top: 3rem;">
-            <h2 style="font-size: 1.25rem; color: #e5e7eb; font-weight: 600; margin-bottom: 0.5rem;">Sectors We Work With</h2>
-            <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 1.5rem;">Designated CII sectors under the Second Schedule of the Regulations.</p>
+        <div style="border-top: 1px solid #E2E8F0; padding-top: 3rem;">
+            <h2 style="font-size: 1.25rem; color: #0D1E38; font-weight: 600; margin-bottom: 0.5rem;">Sectors We Work With</h2>
+            <p style="color: #64748B; font-size: 0.875rem; margin-bottom: 1.5rem;">Designated CII sectors under the Second Schedule of the Regulations.</p>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
-                <div style="background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 0.5rem; padding: 1.25rem 1.5rem;">
-                    <p style="font-size: 0.875rem; font-weight: 600; color: #e5e7eb; margin-bottom: 0.35rem;">Energy</p>
-                    <p style="font-size: 0.8rem; color: #6b7280; line-height: 1.5;">Electricity generation, transmission/distribution, petroleum, natural gas</p>
+                <div style="background: #F4F6F8; border: 1px solid #E2E8F0; border-radius: 0.5rem; padding: 1.25rem 1.5rem;">
+                    <p style="font-size: 0.875rem; font-weight: 600; color: #0D1E38; margin-bottom: 0.35rem;">Energy</p>
+                    <p style="font-size: 0.8rem; color: #64748B; line-height: 1.5;">Electricity generation, transmission/distribution, petroleum, natural gas</p>
                 </div>
-                <div style="background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 0.5rem; padding: 1.25rem 1.5rem;">
-                    <p style="font-size: 0.875rem; font-weight: 600; color: #e5e7eb; margin-bottom: 0.35rem;">Water</p>
-                    <p style="font-size: 0.8rem; color: #6b7280; line-height: 1.5;">Drinking water storage, distribution, quality assurance, wastewater treatment</p>
+                <div style="background: #F4F6F8; border: 1px solid #E2E8F0; border-radius: 0.5rem; padding: 1.25rem 1.5rem;">
+                    <p style="font-size: 0.875rem; font-weight: 600; color: #0D1E38; margin-bottom: 0.35rem;">Water</p>
+                    <p style="font-size: 0.8rem; color: #64748B; line-height: 1.5;">Drinking water storage, distribution, quality assurance, wastewater treatment</p>
                 </div>
-                <div style="background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 0.5rem; padding: 1.25rem 1.5rem;">
-                    <p style="font-size: 0.875rem; font-weight: 600; color: #e5e7eb; margin-bottom: 0.35rem;">Transport</p>
-                    <p style="font-size: 0.8rem; color: #6b7280; line-height: 1.5;">Aviation, rail, road, maritime and port operations</p>
+                <div style="background: #F4F6F8; border: 1px solid #E2E8F0; border-radius: 0.5rem; padding: 1.25rem 1.5rem;">
+                    <p style="font-size: 0.875rem; font-weight: 600; color: #0D1E38; margin-bottom: 0.35rem;">Transport</p>
+                    <p style="font-size: 0.8rem; color: #64748B; line-height: 1.5;">Aviation, rail, road, maritime and port operations</p>
                 </div>
-                <div style="background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 0.5rem; padding: 1.25rem 1.5rem;">
-                    <p style="font-size: 0.875rem; font-weight: 600; color: #e5e7eb; margin-bottom: 0.35rem;">Financial Services</p>
-                    <p style="font-size: 0.8rem; color: #6b7280; line-height: 1.5;">Banking, payment systems, stock exchange</p>
+                <div style="background: #F4F6F8; border: 1px solid #E2E8F0; border-radius: 0.5rem; padding: 1.25rem 1.5rem;">
+                    <p style="font-size: 0.875rem; font-weight: 600; color: #0D1E38; margin-bottom: 0.35rem;">Financial Services</p>
+                    <p style="font-size: 0.8rem; color: #64748B; line-height: 1.5;">Banking, payment systems, stock exchange</p>
                 </div>
             </div>
-            <p style="margin-top: 1rem; font-size: 0.8rem; color: #6b7280;">16 sectors are formally designated under the Second Schedule. <a href="cii.html" style="color: #4B8BF5; text-decoration: none;">See the full list →</a></p>
+            <p style="margin-top: 1rem; font-size: 0.8rem; color: #64748B;">16 sectors are formally designated under the Second Schedule. <a href="cii.html" style="color: #E8630A; text-decoration: none;">See the full list →</a></p>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p style="margin-bottom: 1rem;">port254 &middot; CII Cybersecurity Advisory</p>
-            <div style="display: flex; justify-content: center; gap: 1.5rem; margin-top: 1rem; flex-wrap: wrap; align-items: center;">
-                <a href="mailto:admin@port254.com" style="color: #9ca3af; text-decoration: none; transition: color 0.2s; font-size: 0.875rem;" onmouseover="this.style.color='#4B8BF5'" onmouseout="this.style.color='#9ca3af'">admin@port254.com</a>
-                <a href="https://github.com/254kamikaze" target="_blank" style="color: #9ca3af; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#4B8BF5'" onmouseout="this.style.color='#9ca3af'">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 0.25rem;">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                    GitHub
-                </a>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo">port254</div>
+                <p>CII cybersecurity advisory for Kenya's critical infrastructure operators, anchored to IEC 62443 and the CII Regulations (Legal Notice 44 of 2024).</p>
             </div>
+            <div class="footer-col">
+                <h4>Site</h4>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="ai.html">AI Security</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Regulatory</h4>
+                <ul>
+                    <li><a href="cii.html">CII Regulations</a></li>
+                    <li><a href="cmca6.html">Form CMCA 6</a></li>
+                    <li><a href="iec62443.html">IEC 62443</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:admin@port254.com">admin@port254.com</a></li>
+                    <li><a href="https://github.com/254kamikaze" target="_blank">GitHub</a></li>
+                </ul>
+                <a href="contact.html" class="footer-cta">Get in Touch →</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 port254 &middot; CII Cybersecurity Advisory</span>
         </div>
     </footer>
 </body>
