@@ -91,42 +91,6 @@
             color: #7a9bb5; text-transform: uppercase; line-height: 2;
         }
 
-        .stats-bar {
-            background: #0D1E38;
-        }
-
-        .stat-strip {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-        }
-
-        .stat-strip-item {
-            padding: 1.75rem 1rem;
-            text-align: center;
-            border-right: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .stat-strip-item:last-child {
-            border-right: none;
-        }
-
-        .stat-strip-value {
-            font-size: 1.6rem;
-            font-weight: 800;
-            color: #E8630A;
-            display: block;
-            margin-bottom: 0.25rem;
-        }
-
-        .stat-strip-label {
-            font-size: 0.75rem;
-            color: #9fb8ce;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-        }
-
         .features-section {
             max-width: 1200px;
             margin: 4rem auto;
@@ -222,9 +186,6 @@
 
         @media (max-width: 768px) {
             .features-grid { grid-template-columns: 1fr; }
-            .stat-strip { grid-template-columns: repeat(2, 1fr); }
-            .stat-strip-item:nth-child(2) { border-right: none; }
-            .stat-strip-item:nth-child(1), .stat-strip-item:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.08); }
         }
     </style>
 </head>
@@ -255,8 +216,8 @@
     <!-- Hero -->
     <div class="hero">
         <div class="hero-inner">
-            <h1 class="hero-title">Operational technology and critical-infrastructure cybersecurity, from someone who has <em>actually operated it.</em></h1>
-            <p class="hero-description">Port254 is the principal-led advisory of Tony Kirui &mdash; ISA/IEC 62443 Expert, CISSP, OSCP, OSEP &mdash; built on two decades securing networks and industrial environments, most recently at principal level in Australian critical infrastructure. We advise African critical-infrastructure operators on OT/ICS security, IEC 62443 alignment, and the AI systems now entering that same environment.</p>
+            <h1 class="hero-title">Operational technology and <em>critical-infrastructure</em> cybersecurity.</h1>
+            <p class="hero-description">Port254 is the principal-led advisory of Tony Kirui (ISA/IEC 62443 Expert, CISSP, OSCP, OSEP), built on two decades securing networks and industrial environments, most recently at principal level in Australian critical infrastructure. We advise African critical-infrastructure operators on OT/ICS security, IEC 62443 alignment, and the AI systems now entering that same environment.</p>
             <div class="cta-buttons">
                 <a href="contact.html" class="cta-button">Book a Scoping Conversation</a>
                 <a href="capability-statement.html" class="cta-button secondary">Read the Capability Statement</a>
@@ -265,32 +226,10 @@
         </div>
     </div>
 
-    <!-- Stats -->
-    <div class="stats-bar">
-        <div class="stat-strip">
-            <div class="stat-strip-item">
-                <span class="stat-strip-value">9 Feb</span>
-                <span class="stat-strip-label">Regulations in force (2024)</span>
-            </div>
-            <div class="stat-strip-item">
-                <span class="stat-strip-value">24 hrs</span>
-                <span class="stat-strip-label">Incident reporting window</span>
-            </div>
-            <div class="stat-strip-item">
-                <span class="stat-strip-value">Annual</span>
-                <span class="stat-strip-label">Mandatory risk assessment</span>
-            </div>
-            <div class="stat-strip-item">
-                <span class="stat-strip-value">16</span>
-                <span class="stat-strip-label">Designated CII sectors</span>
-            </div>
-        </div>
-    </div>
-
     <!-- Problem / Value -->
     <div style="max-width: 1000px; margin: 0 auto; padding: 4rem 1.5rem 1rem; text-align: center;">
         <h2 style="font-size: 1.5rem; color: #0D1E38; font-weight: 700; margin-bottom: 1rem;">Kenya's CII Regulations are in force. Most designated operators can't yet prove they meet them.</h2>
-        <p style="color: #4A5568; font-size: 1.02rem; line-height: 1.8; max-width: 720px; margin: 0 auto;">The compliance deadlines have passed. The bigger risk isn't the paperwork &mdash; it's SCADA, energy-management and industrial-control environments that were never designed to be internet-adjacent, now converging with IT faster than most operators' security programmes have kept up. We work on the operational-technology layer that IT security firms don't cover.</p>
+        <p style="color: #4A5568; font-size: 1.02rem; line-height: 1.8; max-width: 720px; margin: 0 auto;">The compliance deadlines have passed. The bigger risk isn't the paperwork. It's SCADA, energy-management and industrial-control environments that were never designed to be internet-adjacent, now converging with IT faster than most operators' security programmes have kept up. We work on the operational-technology layer that IT security firms don't cover.</p>
     </div>
 
     <!-- Features Section -->
@@ -300,7 +239,7 @@
             <div class="feature-card">
                 <div class="feature-reg">Service 01</div>
                 <h3 class="feature-title">OT/ICS Security Assessment</h3>
-                <p class="feature-description">Asset identification, zone and conduit modelling, and target security level assessment for SCADA, DCS, and industrial control environments &mdash; the foundation every other engagement builds on.</p>
+                <p class="feature-description">Asset identification, zone and conduit modelling, and target security level assessment for SCADA, DCS, and industrial control environments: the foundation every other engagement builds on.</p>
                 <a href="services.html" class="feature-link">Learn More →</a>
             </div>
 
@@ -324,7 +263,7 @@
             <div class="feature-card">
                 <div class="feature-reg">Service 04</div>
                 <h3 class="feature-title">OT Network Architecture &amp; Segmentation</h3>
-                <p class="feature-description">IT/OT boundary design, zone-and-conduit network architecture, and remote and vendor access review &mdash; the networking depth most cybersecurity-only advisors don't have.</p>
+                <p class="feature-description">IT/OT boundary design, zone-and-conduit network architecture, and remote and vendor access review: the networking depth most cybersecurity-only advisors don't have.</p>
                 <a href="services.html" class="feature-link">Learn More →</a>
             </div>
 
@@ -332,7 +271,7 @@
             <div class="feature-card">
                 <div class="feature-reg">Service 05</div>
                 <h3 class="feature-title">Offensive Assurance for OT/IT Boundary</h3>
-                <p class="feature-description">OSCP- and OSEP-certified, operations-safe penetration testing of SCADA, ICS, and IT/OT boundary systems &mdash; without disrupting a live process.</p>
+                <p class="feature-description">OSCP- and OSEP-certified, operations-safe penetration testing of SCADA, ICS, and IT/OT boundary systems, without disrupting a live process.</p>
                 <a href="services.html" class="feature-link">Learn More →</a>
             </div>
 
@@ -350,7 +289,7 @@
     <div class="why-section">
         <div class="why-inner">
             <h2>Not a generalist IT-security firm. Not a global consultancy flying in a specialist for the week.</h2>
-            <p class="lead">Port254 is one credentialed principal who has held the operational and engineering role, not just the audit role &mdash; and who is available directly, not delegated to a graduate team.</p>
+            <p class="lead">Port254 is one credentialed principal who has held the operational and engineering role, not just the audit role, and who is available directly, not delegated to a graduate team.</p>
             <div class="why-grid-home">
                 <div class="why-card">
                     <h4>Engineering, not just audit</h4>
@@ -358,7 +297,7 @@
                 </div>
                 <div class="why-card">
                     <h4>Attacker and defender</h4>
-                    <p>OSCP and OSEP certified &mdash; the same person who designs the architecture can test it, rather than handing that off to a separate team.</p>
+                    <p>OSCP and OSEP certified: the same person who designs the architecture can test it, rather than handing that off to a separate team.</p>
                 </div>
                 <div class="why-card">
                     <h4>International CI practice</h4>
@@ -386,7 +325,7 @@
             <div>
                 <span class="tag">Insights</span>
                 <h3>What Legal Notice 44 Actually Requires of Aviation and Transport CII</h3>
-                <p>What Regulation 39(d), 31(2), and Form CMCA 6 specifically require of an airport, port, or rail operator &mdash; and where the operational-technology gap actually sits.</p>
+                <p>What Regulation 39(d), 31(2), and Form CMCA 6 specifically require of an airport, port, or rail operator, and where the operational-technology gap actually sits.</p>
             </div>
             <a href="insights-aviation-cii.html" class="cta-button secondary" style="flex-shrink: 0; color:#0D1E38; border-color:#E2E8F0; background:#fff;">Read the Article →</a>
         </div>
